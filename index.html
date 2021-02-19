@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .app-container {
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-white">
+        <h1 class="text-white p-4 text-center">Countdown App</h1>
+        <div class="app-container p-5 mx-auto shadow-lg">
+            <label for="hours" class="py-2">Hours</label>
+            <input type="number" name="" id="hours" class="form-control" placeholder="Input hours">
+            <label for="minutes" class="py-2">Minutes</label>
+            <input type="number" name="" id="minutes" class="form-control" placeholder="Input minutes">
+            <label for="seconds" class="py-2">Seconds</label>
+            <input type="number" name="" id="seconds" class="form-control" placeholder="Input seconds">
+            <button class="btn btn-success my-3 mx-1 px-5" id="start-btn">Start</button>
+            <button class="btn btn-danger my-3 mx-1 px-5" id="reset-btn">Reset</button>
+            <div id="show-remaining" class="d-flex justify-content-around pt-4">
+                <div class="text-center">
+                    <h2 id="hour-remaining">00</h2>
+                    <p>HOURS</p>
+                </div>
+                <div class="text-center">
+                    <h2 id="minute-remaining">00</h2>
+                    <p>MINUTES</p>
+                </div>
+                <div class="text-center">
+                    <h2 id="second-remaining">00</h2>
+                    <p>SECONDS</p>
+                </div>
+                <div class="text-center">
+                    <h2 id="msecond-remaining">00</h2>
+                    <p>MILISEC</p>
+                </div>
+                <p class="d-none" id="remaining-time"></p>
+            </div>
+            <p class="fs-3 text-center" id="complete-info"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
